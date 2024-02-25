@@ -4,7 +4,7 @@ export interface IImage extends Document {
     title: string; // required
     transformationType: string; // required
     publicId: string; // required
-    secureUrl: string; // required, assuming URL can be represented as string
+    secureURL: string; // required, assuming URL can be represented as string
     width?: number; // optional
     height?: number; // optional
     config?: object; // optional, could be further detailed with a specific interface
@@ -26,11 +26,11 @@ const ImageSchema = new Schema({
     title: { type: String, required: true },
     transformationType: { type: String, required: true },
     publicId: { type: String, required: true },
-    secureUrl: { type: URL, required: true },
+    secureURL: { type: String, required: true },
     width: { type: Number },
     height: { type: Number },
     config: { type: Object },
-    transformationUrl: { type: URL },
+    transformationUrl: { type: String },
     aspectRatio: { type: String },
     color: { type: String },
     prompt: { type: String },
