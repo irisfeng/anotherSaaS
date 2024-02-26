@@ -199,7 +199,7 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
                 <CustomField
                     control={form.control}
                     name="title"
-                    formLabel="Image Title"
+                    formLabel="图片标题"
                     className="w-full"
                     render={({ field }) => <Input {...field} className="input-field" />}
                 />
@@ -208,7 +208,7 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
                     <CustomField
                         control={form.control}
                         name="aspectRatio"
-                        formLabel="Aspect Ratio"
+                        formLabel="宽高比"
                         className="w-full"
                         render={({ field }) => (
                             <Select
@@ -217,7 +217,7 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
                                 value={field.value}
                             >
                                 <SelectTrigger className="select-field">
-                                    <SelectValue placeholder="Select Size" />
+                                    <SelectValue placeholder="选择尺寸" />
                                 </SelectTrigger>
                                 <SelectContent>
                                     {Object.keys(aspectRatioOptions).map((key) => (
@@ -237,7 +237,7 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
                             control={form.control}
                             name="prompt"
                             formLabel={
-                                type === 'remove' ? 'Object to remove' : 'Object to recolor'
+                                type === 'remove' ? '移除目标对象' : '重上色目标对象'
                             }
                             className="w-full"
                             render={({ field }) => (
@@ -258,7 +258,7 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
                             <CustomField 
                                 control={form.control}
                                 name="color"
-                                formLabel="Replacement Color"
+                                formLabel="替换颜色"
                                 className="w-full"
                                 render={({ field}) => (
                                     <Input 
@@ -312,14 +312,14 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
                         disabled={isTransforming || newTransformation === null}
                         onClick={onTransformHandler}
                     >
-                        {isTransforming ? 'Transforming...' : 'Apply Transformation'}
+                        {isTransforming ? '智能生成中...' : '应 用'}
                     </Button>
                     <Button 
                         type="submit" 
                         className="submit-button capitalize"
                         disabled={isSubmitting}
                     >
-                        {isSubmitting ? 'Submitting...' : 'Save Image'}
+                        {isSubmitting ? '正在提交...' : '保存图片'}
                     </Button>
                 </div>
                 

@@ -28,17 +28,17 @@ export const DeleteConfirmation = ({ imageId }: { imageId: string }) => {
           className="button h-[44px] w-full md:h-[54px]"
           variant="destructive"
         >
-          Delete Image
+          删除图片
         </Button>
       </AlertDialogTrigger>
 
       <AlertDialogContent className="flex flex-col gap-10">
         <AlertDialogHeader>
           <AlertDialogTitle>
-            Are you sure you want to delete this image?
+            您确定要删除这张图片吗？
           </AlertDialogTitle>
           <AlertDialogDescription className="p-16-regular">
-            This will permanently delete this image
+            这将永久删除这张图片
           </AlertDialogDescription>
         </AlertDialogHeader>
 
@@ -52,7 +52,7 @@ export const DeleteConfirmation = ({ imageId }: { imageId: string }) => {
               })
             }
           >
-            {isPending ? "Deleting..." : "Delete"}
+            {isPending ? "删除中..." : "删除"}
           </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>

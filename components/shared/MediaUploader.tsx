@@ -35,8 +35,8 @@ const MediaUploader = ({
         onValueChange(result?.info?.public_id)
 
         toast({
-            title: 'Image uploaded successfully',
-            description: '1 credit was deducted from your account',
+            title: '图片上传成功!',
+            description: '您的账户被扣除了1积分',
             duration: 5000,
             className: 'success-toast'
         })
@@ -44,8 +44,8 @@ const MediaUploader = ({
 
     const onUploadErrorHandler = () => {
         toast({
-            title: 'Something went wrong while uploading',
-            description: 'Please try again later',
+            title: '上传时出现了问题...',
+            description: '请稍后再试',
             duration: 5000,
             className: 'error-toast'
         })
@@ -64,7 +64,7 @@ const MediaUploader = ({
             {({ open }) => (
                 <div className="flex flex-col gap-4">
                     <h3 className="h3-bold text-dark-600">
-                        Original
+                        原图
                     </h3>
 
                     {publicId ? (
@@ -94,7 +94,7 @@ const MediaUploader = ({
                                     height={24}
                                 />
                             </div>
-                                <p className="p-14-medium">Click here to upload image</p>
+                                <p className="p-14-medium">按此上传图片</p>
                         </div>
                     )}
                 </div>
