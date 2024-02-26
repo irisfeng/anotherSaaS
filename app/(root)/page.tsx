@@ -14,7 +14,7 @@ const Home = async ({ searchParams }: SearchParamProps) => {
     <>
       <section className='home'>
         <h1 className='home-heading'>
-          ImagiSaaS 释放图片创意
+          ImagiSaaS 释放创意灵感
         </h1>
         <ul className='flex-center w-full gap-20'>
           {navLinks.slice(1, 5).map((link) =>(
