@@ -41,10 +41,10 @@ const MobileNav = () => {
                     <SheetContent className='sheet-content sm:w-64'>
                         <>
                             <Image 
-                                src='/assets/images/logo-text.svg'
+                                src='/assets/images/logo.png'
                                 alt='logo'
-                                width={152}
-                                height={23}
+                                width={34}
+                                height={34}
                             />
                             <ul className='header-nav_elements'>
                                 {navLinks.map((link) => {
